@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="wishlist.css">
+	<link rel="stylesheet" href="/test-Wishlist/font.css">
+</head>
+<body>
+	<div class="nameAndDateWrapper">
+		<div id="name"></div>
+		<div id="date"></div>
+	</div>
+	<div class="reserveWraper" data-status="close">
+		<div class="reserveInput">
+			<div class="reserveTextWrapper">
+				<p id="head" >Забронировать подарок</p>
+				<p>Запиши своё имя, чтобы закрепить выбранный подарок за собой&#128578</p>
+			</div>
+			<label for="reserveInputName">
+				Твое имя
+				<input type="text" name="reservingGift" id="nameReserve">
+			</label>
+			<button id="reserveGiftBtn">Забронировать</button>
+			<button id="backInputName">Назад</button>
+		</div>
+	</div>
+
+	<div class="abortWrapper" data-status="close">
+		<div class="abortInput">
+			<div class="abortTextWrapper">
+				<p id="head" >Отменить бронь</p>
+				<p>Упс...уже кто-то забронировал этот подарок. Если это были не вы и хотите отменить бронь, то может возникнуть путаница&#129300</p>
+			</div>
+			<button id="abortGiftBtn">Отменить бронь</button>
+			<button id="backAbort">Назад</button>
+		</div>
+	</div>
+	
+	<div class="giftsss-wrapper">
+		
+
+	</div>
+	
+	<script src="wishlist.js" type="module"></script>
+</body>
+</html>

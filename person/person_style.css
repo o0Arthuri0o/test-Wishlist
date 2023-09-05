@@ -1,0 +1,257 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;	
+	--gray: #B5B5B5;
+	--blue: #6CDAFF;
+	--light_blue: #E3F1FF;
+	--red: #FF6D53;
+	--green: #6ACF74;
+	font-family: 'JetBrains Mono';
+
+}
+body {	
+	position: relative;
+	background: var(--light_blue);
+	user-select: none;
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+	padding: 23px 16px;
+}
+#addGiftCard[data-status = "open"] {
+
+	font-size: 14px;
+	font-weight: 400;
+	color: black;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto;
+	/* gap: 20px ; */
+
+	padding: 14px 9px;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	position: fixed;
+	z-index: 9999;
+	background-color: var(--blue);
+	width: 90vw;
+	height: 85dvh;
+	border-radius: 8px;
+}
+#addGiftCard button {
+	font-size: 18px;
+	font-weight: 700;
+	color: white;
+	border: none;
+	background-color: black;
+	width: 100%;
+	border-radius: 8px;
+	height: 5vh;
+}
+.buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 1vh;
+}
+#addGiftCard #cancelPlusGift {
+	background-color: var(--red);
+}
+
+#inputs {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2vh;
+}
+#inputs input {
+
+	border: none;
+	background-origin: padding-box;
+	border-radius: 8px;
+	padding: 10px 15px;
+	display: block;
+	width: 100%;
+}
+
+textarea {
+	border: none;
+	border-radius: 8px;
+	padding: 10px 15px;
+	resize: none;
+	width: 100%;
+}
+.buttons-wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 13px;
+}
+
+/* .buttons-wrapper input {
+	display: block;
+	text-align: center;
+	width: 100%;
+	border: 2px solid var(--blue);
+	background-color: var(--light_blue);
+	height: 50px;
+	border-radius: 8px;
+	padding: 0 10px;
+	color: var(--blue);
+	font-size: 18px;
+	font-weight: 400;
+} */
+#addGift {
+	/* width: 100%; */
+	background-color: var(--light_blue);
+	height: 50px;
+	border: 2px solid var(--blue);
+	border-radius: 8px;
+	padding: 0 10px;
+	margin-top: 5px;
+	color: var(--blue);
+	font-size: 18px;
+	font-weight: 700;
+}
+#getLink {
+	/* width: 100%; */
+	background-color: var(--blue);
+	height: 50px;
+	border: none;
+	border-radius: 8px;
+	padding: 0 10px;
+	margin-top: 5px;
+	color: white;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+
+img {
+	width: 30px;
+	height: 30px;
+}
+.giftsss-wrapper {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	padding: 0px 10px;
+	gap: 17px;
+}
+
+.status {
+	position: absolute;
+	content: 'Бронь: Илья';
+	background-color: var(--green);
+	width: auto;
+	height: auto;
+	border-radius: 8px;
+	padding: 3px 5px;
+	color: white;
+	right: -20px;
+	top: -10px;
+}
+
+
+.gift {
+	position: relative;
+	/* justify-content: center; */
+	/* height: auto; */
+	background-color: white;
+	color: black;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto;
+	gap: 15px;
+	border-radius: 8px;
+	padding: 18px 21px;
+
+}
+.image-wrapper {
+	background-color: var(--light_blue);
+	height: 70px;
+	width: 70px;
+	border-radius: 8px;
+	text-align: center;
+	line-height: 90px;
+}
+.top {
+	display: grid;
+	grid-template-columns: 70px 1fr;
+}
+.text-top{
+	display: grid;
+	gap: 1vh;
+	margin-left: 7vw;
+}
+.nameGift { 
+	font-size: 20px;
+	font-weight: 700;
+}
+.price {
+	font-size: 20px;
+	color: var(--blue);
+}
+
+.bottom {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+.text-bottom {
+	display: grid;
+	grid-template-rows: auto auto;
+	grid-template-columns: auto;
+	gap: 6px;
+}
+.comment {
+	max-width: 250px;
+	overflow-wrap: break-word;
+	color: var(--gray);
+	font-size: 14px;
+}
+.text-bottom a {
+	text-decoration: none;
+	color: var(--blue);
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.bottom img {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+@media(min-width:430px) {
+	.comment{
+		max-width: none;
+	}
+}
+@media(max-height:600px){
+	#addGiftCard{
+		gap: 3px;
+	}
+}
+@media(max-height:568px){
+	#addGiftCard[data-status = "open"]{
+		height: 100dvh;
+	}
+}
+#inputFile {
+	display: none;
+
+}
+#inputLabel {
+
+	height: 5vh;
+	line-height: 5vh;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 700;
+	border: 2px dashed var(--gray);
+	border-radius: 8px;
+}
+#addGiftCard[data-status = "close"] {
+	display: none;
+}

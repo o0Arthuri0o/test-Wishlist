@@ -1,0 +1,250 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;	
+	--gray: #B5B5B5;
+	--blue: #6CDAFF;
+	--light_blue: #E3F1FF;
+	--red: #FF6D53;
+	--green: #6ACF74;
+	font-family: 'JetBrains Mono';
+
+}
+body {	
+	position: relative;
+	background: var(--light_blue);
+	user-select: none;
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+	padding: 23px 16px;
+}
+.nameAndDateWrapper{
+	padding: 0px 10px;
+	display: flex;
+	gap: 3vw;
+	align-items: center;
+}
+#name {
+	font-size: 20px;
+	font-weight: 700;
+}
+#date {
+	background-color: var(--green);
+	color: white;
+	border-radius: 8px;
+	padding: 2px 5px;
+}
+
+.gift {
+	position: relative;
+	/* justify-content: center; */
+	/* height: auto; */
+	background-color: white;
+	color: black;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto;
+	gap: 15px;
+	border-radius: 8px;
+	padding: 18px 21px;
+
+}
+
+img {
+	width: 30px;
+	height: 30px;
+}
+.giftsss-wrapper {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	padding: 0px 10px;
+	gap: 17px;
+}
+
+.image-wrapper {
+	background-color: var(--light_blue);
+	height: 70px;
+	width: 70px;
+	border-radius: 8px;
+	text-align: center;
+	line-height: 90px;
+}
+.top {
+	display: flex;
+	gap: 7vw;
+	margin-top: 1vh;
+}
+.text-top{
+	display: flex;
+	flex-direction: column;
+	gap: 2vh;
+}
+.nameGift { 
+	font-size: 20px;
+	font-weight: 700;
+}
+.price {
+	font-size: 20px;
+	color: var(--blue);
+}
+.comment {
+	max-width: 250px;
+	overflow-wrap: break-word;
+	color: var(--gray);
+	font-size: 14px;
+}
+
+.bottom {
+	display: grid;
+	gap: 2vh;
+}
+.bottom button[data-status="open"] {
+	width: 100%;
+	background-color: var(--blue);
+	height: 50px;
+	border: none;
+	border-radius: 8px;
+	padding: 0 10px;
+	margin-top: 5px;
+	color: white;
+	font-size: 18px;
+	font-weight: 700;
+}
+.bottom button[data-status="close"] {
+	width: 100%;
+	background-color: var(--gray);
+	height: 50px;
+	border: none;
+	border-radius: 8px;
+	padding: 0 10px;
+	margin-top: 5px;
+	color: white;
+	font-size: 18px;
+	font-weight: 700;
+}
+.text-bottom {
+	display: flex;
+	justify-content: center;
+}
+.text-bottom a {
+	text-decoration: none;
+	color: var(--blue);
+	font-weight: 700;
+}
+
+.reserveInput{
+	-webkit-box-shadow: 6px 10px 11px 0px rgba(34, 60, 80, 0.2);
+	-moz-box-shadow: 6px 10px 11px 0px rgba(34, 60, 80, 0.2);
+	box-shadow: 6px 10px 11px 0px rgba(34, 60, 80, 0.2);
+	background-color: white;
+	width: 100%;
+	height: 65dvh;
+	border-radius: 8px;
+	padding: 17px 24px;
+	display: grid;
+	grid-template-columns: 1fr;
+	border: 2px solid black;
+}
+.reserveWraper[data-status='open']{
+	z-index: 9999;
+	padding: 0px 20px;
+	width: 100%;
+	height: 65dvh;
+	position: fixed;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+}
+.reserveWraper[data-status='close'] {
+	display: none;
+}
+.reserveInput label{
+	color: var(--gray);
+}
+.reserveInput input {
+	display: block;
+	width: 100%;
+	height: 50px;
+	border: 2px solid var(--gray);
+	border-radius: 8px;
+	padding: 0 10px;
+	margin-top: 5px;
+}
+.reserveTextWrapper {
+	display: grid;
+}
+
+.reserveTextWrapper #head {
+	font-size: 18px;
+	font-weight: 700;
+}
+.reserveInput button{
+	width: 100%;
+	background-color: var(--blue);
+	height: 50px;
+	border: none;
+	border-radius: 8px;
+	padding: 0 10px;
+	margin-top: 5px;
+	color: white;
+	font-size: 18px;
+	font-weight: 700;
+}
+.reserveInput #backInputName {
+	background-color: black;
+}
+
+.abortInput{
+	-webkit-box-shadow: 6px 10px 11px 0px rgba(34, 60, 80, 0.2);
+	-moz-box-shadow: 6px 10px 11px 0px rgba(34, 60, 80, 0.2);
+	box-shadow: 6px 10px 11px 0px rgba(34, 60, 80, 0.2);
+	
+	background-color: white;
+	width: 100%;
+	height: 40dvh;
+	border-radius: 8px;
+	padding: 17px 24px;
+	display: grid;
+	grid-template-columns: 1fr;
+	border: 2px solid black;
+}
+.abortWrapper[data-status='open']{
+	z-index: 9999;
+	padding: 0px 20px;
+	width: 100%;
+	height: 40dvh;
+	position: fixed;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+}
+.abortWrapper[data-status='close'] {
+	display: none;
+}
+.abortInput #backAbort {
+	background-color: black;
+}
+.abortTextWrapper {
+	display: grid;
+	gap: 1vh;
+}
+
+.abortTextWrapper #head {
+	font-size: 18px;
+	font-weight: 700;
+}
+.abortInput button{
+	width: 100%;
+	background-color: var(--red);
+	height: 50px;
+	border: none;
+	border-radius: 8px;
+	padding: 0 10px;
+	margin-top: 5px;
+	color: white;
+	font-size: 18px;
+	font-weight: 700;
+}

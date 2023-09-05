@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="/test-Wishlist/font.css">
+	<link rel="stylesheet" href="person_style.css">
+</head>
+<body>
+	
+	<div id="addGiftCard" data-status="close">
+		<div id="inputs" >
+			<label for="inputLink" >
+				Ссылка, где можно купить подарок
+				<input  id="inputLink" class="inputGift" type="text" placeholder="Например: https://tastycoffee.ru">
+			</label>
+			<label for="inputName" >
+				Название
+				<input  id="inputName" class="inputGift" type="text" placeholder="Например: Competitive coffee">
+			</label>
+			<label  for="inputPrice">
+				Цена
+				<input  id="inputPrice" class="inputGift" type="text" placeholder="Например: 1299">
+			</label>
+			<label >
+				Комментарий
+				<textarea  maxlength="185" name="comment" id="commentGift" cols="30" rows="7" placeholder="Уточни какие-то детали подарка или все, что считаешь важным"></textarea>
+			</label>
+		</div>
+		<label  for="inputFile" id="inputLabel">
+			Прикрепите фото
+		</label>
+		<input  id="inputFile" type="file" accept="image/*">
+		<div class="buttons">
+			<button  id="plusGift" >Добавить подарок</button>
+			<button  id="cancelPlusGift" >Отмена</button>
+		</div>
+	
+
+	</div>
+
+	<div class="buttons-wrapper">
+		<!-- <input type="date" value="2023-09-01"> -->
+		<button id="addGift">Добавить подарок</button>
+		<button id="getLink">Поделиться ссылкой</button>
+	</div>
+	<div class="giftsss-wrapper">
+
+		
+
+
+	</div>
+
+	<script src="person.js" type="module"></script>
+</body>
+</html>
